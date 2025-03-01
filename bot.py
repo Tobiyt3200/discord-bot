@@ -4,12 +4,26 @@ import datetime
 import discord
 import aiohttp
 import json
+from flask import Flask
 import requests  # website http requests (not used, but kept if needed)
 from discord.ext import commands, tasks
 from discord import app_commands
 from sqlalchemy import create_engine, Column, String, DateTime
 from sqlalchemy.orm import sessionmaker, declarative_base
 from dotenv import load_dotenv
+
+
+app = Flask("my_bot_app")
+
+@app.route("/")
+def home():
+    return "Bot is alive!"
+
+def run_webserver():
+    app.run(host="0.0.0.0", port=8000)
+
+# Start the web server in a background thread
+threading.Thread(target=run_webserver).start()
 
 # 1. Load environment variables
 load_dotenv()
