@@ -1,0 +1,820 @@
+{
+  "oaths": [
+	{
+      "name": "Oathless",
+      "oath_requirement": "10 minutes of playtime",
+      "description": "Oath: Oathless is one of the 16 obtainable Oaths in Deepwoken. It is a rather varied Oath, given that its purpose is to extend the capabilities of what would be considered a Pathfinder. Together with Linkstrider, Dawnwalker, Fadetrimmer, and Contractor, it is one of the 5 Oaths that have no direct stat requirements.\n\nDespite its oxymoronic nature, this still counts as an Oath. Other Oaths, such as Linkstrider or Contractor, that have their progression tied to killing Oath users can progress by killing people with this Oath as well.",
+      "mystic_quote": "I am unbounded.",
+      "obtainment": [
+        "To start the Oathless quest, head to the docks at Miner's Landing and pass through the entrance.",
+        "Climb up to the Mystic in front and turn right, walking until you find a log by the ledge facing the sea highway.",
+        "Enter the cave behind the log where Cerulean is found leaning against a wall; they will tell you that to understand the freedom of being Oathless, you must seek out their disciples.",
+        "If you have obtained Oathless, speak to Cerulean again to permanently unlock it (this skips the quest on all characters/slots, even those created before unlocking it).",
+        "Note: Obtaining Oathless via any method requires 10 minutes of playtime on that slot.",
+        "Oathless can be reobtained if you Oathbreak it.",
+        "Inside this cave is the Oathless Trainer and the aforementioned log tunnel.",
+        "Recommended order for disciples:",
+        "  • Viridian at Fort Merit (in a house near the elevator).",
+        "  • Saffron at Meteor Isle (in a 2-story house).",
+        "  • Celadon at Summer Isle (on the second floor of the guildhall).",
+        "After speaking with all three, return to Cerulean to receive the Oath.",
+        "For a more in-depth walkthrough, consider watching this video."
+      ],
+      "effects": [
+        "+10 Health",
+        "+20% Oath Armor",
+        "+3 Wildcard Mantra Slots"
+      ],
+      "progression": "",
+      "abilities": [],
+      "passives": {},
+      "dialogue": [
+        "“Those eyes... you wish to walk alone too.” ― Disciple of Cerulean"
+      ],
+      "trivia": [
+        "The first Oath to be released in the game.",
+        "Used to be obtainable through a hand of cards at around Power 30 (the equivalent to current-day Power 10).",
+        "Commonly agreed to be subpar compared to other non-stat locked Oaths, but its +3 Wildcard slots and solid stats make it very flexible.",
+        "Obtaining Oathless doesn't award the Oathsworn badge.",
+        "You can still use Shrine of Order if you have Oathless.",
+        "All quest characters are named after cities in the Kanto region (e.g., Cerulean is blue; Viridian and Celadon are blueish greens; Saffron is red).",
+        "Developer intentions behind its design have been divisive: initially claimed as the strongest Oath, later referred to as a 'seatwarmer' due to its tedious quest.",
+        "It is one of the few Oaths that can be resworn if desired.",
+        "Oathless gives echoes for an Oath upon wiping (a 10-minute playtime requirement was added to curb abuse).",
+        "It is the only Oath realistically obtainable at Power 1, which is somewhat oxymoronic since by being Oathless, you still have an Oath."
+      ],
+      "references": [
+        "View source"
+      ],
+      "navigation": "Return to Cerulean after speaking with all disciples."
+    },
+	{
+      "name": "Arcwarder",
+      "oath_requirement": "20 Fortitude, 20 Flamecharm, 20 Thundercall; Complete Alpha's Quest",
+      "description": "Oath: Arcwarder is one of the 16 obtainable Oaths in Deepwoken. It heavily focuses on defense – four of its passives are defensive while the other two provide mobility. It still allows for aggressive play through dashes that close gaps and effective combat mantras. \n\n“Unlike the Central Authority, the Union's identity is not defined wholly by internal hierarchy, lingering military traditions, and loyalty to power. Instead, it is rooted in the solidarity of toil – a sense of kinship among those working for the same goal.” ― The Hammer's Call \n\nThe Arc Suit is a defense‐oriented, semi-sentient armour bestowed by the Union. It fuses with the soul of those who swear the Oath, allowing them to manifest protective armor at will. Arcwarders are conduits of protection and are uniquely able to utilize Plasma in their attacks due to a combination of Flamecharm and Thundercall within the suit.",
+      "mystic_quote": "The Union is absolute.",
+      "obtainment": [
+        "Go to Layer 2 and complete Alpha's quest:",
+        "  • Activate the Generator.",
+        "  • Talk to Alpha.",
+        "  • Retrieve injured Epsi.",
+        "  • Choose option 2 when talking to him (option 1 will cause Epsi to perish).",
+        "  • Dying during the quest does not force you to restart.",
+        "  • Return to Alpha (you MUST return, or Delta will not give you Arcwarder).",
+        "Obtainment requires: 20 Fortitude, 20 Flamecharm, 20 Thundercall, and completion of Alpha's Quest.",
+        "Return to the surface and talk to Delta at Miner's Landing (behind the water mill by the waterfall) and then kill either Chaser or Scion of Ethiron to progress.",
+        "Arcwarder is not reobtainable if you Oathbreak it."
+      ],
+      "progression": "Arcwarder passives and mantras are obtained by defeating either Chaser or Scion of Ethiron a total of 4 times—one passive or mantra per kill. Mantras are received every 2 kills and upon light hooking out from Chaser/Scion.",
+      "effects": [
+        "+1 Wildcard Mantra Slot",
+        "+2 Combat Mantra Slots"
+      ],
+      "variants": [
+        "Umbral",
+        "Black",
+        "Gold",
+        "Dark Grey"
+      ],
+      "abilities": [
+        {
+          "name": "Arc Suit ★★★ - Support Mantra",
+          "description": "Conjure and equip your Arcwarder suit. It encases you in durable armor for 15 seconds, can be modified with up to 3 Vibrant Gems (increasing damage reduction up to 15%) and with Aeon/Eternal Logstones (up to 1 minute duration). The suit provides i-frames during the latter half of its windup. Note: Orbital Ice is less effective when used alongside the Arc Suit. Available in multiple colors (Umbral, Black, Gold, Dark Grey, White – changeable with Dye Packets)."
+        },
+        {
+          "name": "Arc Module: Leap - Passive",
+          "description": "While the Arc Suit is active, holding Spacebar after jumping propels you upward, allowing a double jump."
+        },
+        {
+          "name": "Arc Module: Dash - Passive",
+          "description": "When the Arc Suit is active, your dashes become Jet Dashes that let you attack while dashing and extend your Air Dash distance."
+        },
+        {
+          "name": "Arc Module: Eject - Passive",
+          "description": "If you are blockbroken while Arc Suit is active, you instantly eject from the suit, preventing further damage. Exiting the suit sets your posture to 50%."
+        },
+        {
+          "name": "Arc Module: Guard - Passive",
+          "description": "Blocking with the Arc Suit negates all backstabs and enables you to block attacks from behind, preventing Spine Cutter when hit in the back."
+        },
+        {
+          "name": "Arc Module: Null - Passive",
+          "description": "When Arc Suit is active, outgoing and incoming enchant effects are nullified. This can be toggled by pressing N."
+        },
+        {
+          "name": "Arc Wave ★★★ - Combat Mantra",
+          "description": "Stomp the ground to release a wave of Arc energy that deals moderate Oath damage. It can apply both Shock and Burning (or alternate variants) and scales with both Flamecharm and Thundercall. Landing this mantra while in Arc Suit removes 50% of your current posture."
+        },
+        {
+          "name": "Arc Beam ★★★ - Combat Mantra",
+          "description": "Fire plasma energy that deals 20 base Oath damage and extra damage in PvE. It can apply Shock and Burning (or alternate variants), scales with both Flamecharm and Thundercall, and can be used in the air if you have downward momentum. It instantly grips low-health players if the attack would knock them, with a 17x PvE damage scale."
+        }
+      ],
+      "gallery": [
+        "Concept art",
+        "Old icon"
+      ],
+      "trivia": [
+        "The Arcwarder suit originally looked far different but was redesigned to fit Deepwoken's art style; the original suit was reused for the Immortal Guardians.",
+        "The suit is inspired by Bondrewd's suit from Made in Abyss; the Immortal Guardians wear an exact copy while Arcwarder's design is slightly altered.",
+        "Arcwarder was originally named Arcshifter.",
+        "The suit is compatible with Equipment Dye, making Arc Suit the only mantra compatible with Dye Packets.",
+        "As of May 1st, 2024, the suit’s main color and glow can be dyed.",
+        "Created by Dexerius, along with Visionshaper.",
+        "If wearing the Arc Suit while gliding and it breaks off, your glider is forcibly put away.",
+        "\"From each according to their ability, to each according to their needs\" – a quote by Karl Marx's 'Critique of the Gotha Program.'",
+        "Taking a helmet off (via pressing P) makes hair visible even while Arcwarder is active.",
+        "Arcwarder and Saintsworn are the only Oaths requiring points invested in an Attunement.",
+        "Arcwarder and Oathless are the only two Oaths that have no cosmetic additions, as the Arc Suit is a mantra.",
+        "Dexerius is planning to rework the Oath by adding 'defense mode' and 'attack mode' features."
+      ],
+      "references": [
+        "View source"
+      ],
+      "navigation": "N/A"
+    },
+    {
+      "name": "Bladeharper",
+      "oath_requirement": "75 MED (or 90 total weapon stat points), 25 AGL or STR, Equipment of a non-Fist weapon",
+      "description": "Oath: Bladeharper is one of the 16 obtainable Oaths in Deepwoken. It's known for the user's extreme proficiency with slash‐based attacks and the ability to massively buff offensive output by landing consecutive hits or sacrificing health. The Oath results from conducting a Reflection Ritual at the Sky Statues scattered throughout the Luminant, where the user vows to spend their future with their own blade.",
+      "mystic_quote": "Within your mind, many futures present themselves before you. Only your own must stand supreme.",
+      "obtainment": [
+        "Requires 75 MED points (or a cumulative 90 in weapon stats) and 25 AGL or STR. A non-Fist weapon must be equipped.",
+        "Interact with one of the numerous Sky Statues across both Luminants to be transported to Blade Within.",
+        "Defeat Mind's Reflection (a 1:1 copy of yourself including weapon, talents, and mantras) to obtain the Oath. The mirror has 3 lives (each spawned at a different statue); it will use all your mantras—remove unwanted ones via Deep Shrines if needed.",
+        "Bladeharper can be reobtained if you Oathbreak it."
+      ],
+      "progression": "Progress the Oath by interacting with different Sky Statues and defeating Mind's Reflection up to three times. The first statue grants Lithe Step and Palm Strike; the second yields Soaring Storm and Untouchable; the final statue gives Reveal, Float Like a Butterfly, and Decimate.",
+      "effects": [
+        "Upon obtaining the Oath, two snake bracelets wrap around your arms.",
+        "+2 Combat Mantra Slots"
+      ],
+      "abilities": [
+        "True Strength (Passive): By proccing Untouchable or Reveal, enter True Strength state (15s if from Untouchable, or variable if from Reveal with passive Wither on your HP). Lowers Lithe Step's cooldown from 3s to 1s, grants access to Float Like a Butterfly, removes the proc condition on Soaring Storm, empowers Bladeharper mantras, and provides a continuous speed boost.",
+        "Lithe Step (Passive): When sprinting, roll-cancel to vanish and surge with unmatched speed; grants temporary invisibility and a noticeable speed boost. Cooldown is 3s (reduced to 1s under True Strength).",
+        "Palm Strike (Combat Mantra): Slice your opponent with your palm for 31 Oath & Slash damage. If True Strength is active, an extra flurry of 4 slashes deals 16 additional damage and repeats the base attack, more than doubling its output.",
+        "Soaring Storm (Passive): Empowers uppercuts after Lithe Step, flourishing, or an Oath ability; deals a total of 24 Oath & Slash damage (6 hits at 4 damage each). The proc condition is removed if True Strength is active.",
+        "Untouchable (Passive): By landing 5 consecutive hits without taking damage, enter True Strength state for 15 seconds. Multi-hit attacks can count, and some non-weapon attacks also build stacks.",
+        "Reveal (Utility): Toggle on/off True Strength state. While active, you passively build up Wither on yourself (reducing max HP). If your HP falls below 10%, Reveal automatically turns off. Activation takes about 4 seconds.",
+        "Float Like a Butterfly (Passive): While True Strength is active, cancel your air dash to trigger a frenzy of slashes for a total of 28 Oath & Slash damage (4 hits at 7 damage each). Has a 5-second cooldown and is only accessible in True Strength.",
+        "Decimate (Combat Mantra): Cut through your opponent for 37.34 total Oath & Slash damage (two strikes of 18.67 each). Under True Strength, this attack extends to nearby enemies—with a weakened hit (0.1 damage) and a flurry of 3 extra slashes dealing 12 damage total."
+      ],
+      "strategy": "Bladeharper relies on precise timing and managing the True Strength state. Prioritize mobility (e.g., Strong Leap) to reach Sky Statues and maintain high attunement levels for frequent mantra use. Use Ether wisely to counteract parries and dodges. When facing Mind's Reflection, remember it mirrors your abilities—adapt your strategy if necessary.",
+      "trivia": [
+        "The statue at the center of Blade Within displays the weapon you had equipped when teleported.",
+        "The Oath bracelets were formerly called 'Snakerings' before being renamed 'Bladeharper Serpents'.",
+        "Its obtainment method is inspired by Ichigo Kurosaki's Bankai from BLEACH.",
+        "The NPC's moveset remains unchanged upon death, reusing Maestro's AI.",
+        "Bladeharper is one of four Oaths where progression cannot be skipped with knowledge (others: Chainwarden, Saintsworn, Soulbreaker).",
+        "The slashing effects resemble Ryomen Sukuna's abilities from Jujutsu Kaisen.",
+        "Originally, Decimate could not be used on Fist weapons, likely due to Melonbeard's disfavor for them."
+      ],
+      "references": [
+        "View source"
+      ],
+      "navigation": ""
+    },
+	{
+      "name": "Blindseer",
+      "oath_requirement": "40 Willpower, 3 Mental Fortress Talents",
+      "description": "Oath: Blindseer is one of the 16 obtainable Oaths in Deepwoken. It is centered around utility and uses sanity as its resource. It provides various life-saving benefits in combat and in The Depths, and stands in opposition to Visionshaper.",
+      "mystic_quote": "I will protect this world.",
+      "obtainment": [
+        "Meet the following requirements: 40 Willpower, 3 Mental Fortress Talents (e.g., Breathing Exercise, Conquer your Fears, and Disbelief from Talent rolls—not from equipment), and be blind (either via the Blinded Talent from Blindfolds or the Blind Flaw).",
+        "Head to Lower Erisia and proceed past the camp in the ruins to reach the bandit village.",
+        "Climb the wall above the village to reach the Temple of the Forgotten Flame.",
+        "Enter the temple through the doors or above them, then proceed through the left passage.",
+        "Inside, interact with the engraved message while blind to obtain the Oath.",
+        "For a more in-depth walkthrough, consider watching the related video."
+      ],
+      "progression": [
+        "Progress Blindseer by helping Pathfinders in the Depth Trial.",
+        "The first mantra unlocks after helping 1 Pathfinder, the second after 3, and the final after 5.",
+        "A passive Talent is also unlocked after helping 4 Pathfinders (triggered after a brief exit post the Voice of Authority).",
+        "Note: Helping players with Oathless will not count for progression."
+      ],
+      "effects": [
+        "+1 Wildcard Mantra Slot",
+        "+1 Support Mantra Slot",
+        "+10 Sanity"
+      ],
+      "abilities": [
+        {
+          "name": "Mindsoothe - Support Mantra",
+          "description": "Heals nearby allies for 60 HP at the cost of your Sanity. The Sanity cost is only deducted on a successful heal. Has a 60-second cooldown. Hold F during the cast animation to heal everyone in range, regardless of ally status. Does not work on NPCs. (Obtainment: Help 1 Pathfinder in the Depth Trial)"
+        },
+        {
+          "name": "Tranquil Circle - Support Mantra",
+          "description": "Creates a circle that disables mantra use for everyone within its radius, including the caster, but grants complete immunity to mantra damage while inside. Also adds 10% Monster Armor to players in the area. Can be modified with a Magnet Spark to reduce the circle's size while making it follow you. (Obtainment: Help 3 Pathfinders in the Depth Trial)"
+        },
+        {
+          "name": "All-Seeing Eye - Passive",
+          "description": "Your mystic eye reveals invisible foes and players under various cloaking effects by displaying a Blindseer Eye icon. This Talent nullifies Tacet Murmur, allowing you to see cloaked players normally. (Obtainment: Help 4 Pathfinders in the Depth Trial)"
+        },
+        {
+          "name": "Sightless Beam - Combat Mantra",
+          "description": "Fires a high-pressure beam from your eyes dealing around 150 base damage, with extra damage and posture at the start. It can be canceled midway by pressing F. The beam also steals eyesight to trigger the blind effect if enough hits land. (Obtainment: Help 5 Pathfinders in the Depth Trial)"
+        }
+      ],
+      "notes": "Having the Blind Flaw removes the need for a blindfold. Blindseer grants full vision and increased brightness while wearing a Blindfold, and cures the Blindness flaw. When wearing a Blindfold, you are immune to Gaze. For Vesperians, the mask displays a gold eye on a gray background.",
+      "trivia": [
+        "Blindseer mantras do not scale with Willpower.",
+        "You can reroll the Mental Fortress Talents and still keep the Oath.",
+        "Glyphs at Summer Isle and the Lightkeeper Temple offer hints on progressing Blindseer if not discovered by trial and error.",
+        "The Blindseer Eye can be dyed using a Dye Packet.",
+        "Vesperians with Blindseer have a different visual presentation compared to non-Vesperians.",
+        "A bug causes the mask decoration to persist even after the Oath is removed.",
+        "Inspired by an interview with Raguza, referencing the idea of 'seeing the truths of the world' when wearing a blindfold."
+      ],
+      "references": [
+        "View source"
+      ],
+      "navigation": "N/A"
+    },
+	{
+      "name": "Blindseer",
+      "oath_requirement": "40 Willpower, 3 Mental Fortress Talents",
+      "description": "Oath: Blindseer is one of the 16 obtainable Oaths in Deepwoken. It is centered around utility and uses sanity as its resource. It provides various life-saving benefits in combat and in The Depths, and stands in opposition to Visionshaper.",
+      "mystic_quote": "I will protect this world.",
+      "obtainment": [
+        "Meet the following requirements: 40 Willpower, 3 Mental Fortress Talents (e.g., Breathing Exercise, Conquer your Fears, and Disbelief from Talent rolls—not from equipment), and be blind (either via the Blinded Talent from Blindfolds or the Blind Flaw).",
+        "Head to Lower Erisia and proceed past the camp in the ruins to reach the bandit village.",
+        "Climb the wall above the village to reach the Temple of the Forgotten Flame.",
+        "Enter the temple through the doors or above them, then proceed through the left passage.",
+        "Inside, interact with the engraved message while blind to obtain the Oath.",
+        "For a more in-depth walkthrough, consider watching the related video."
+      ],
+      "progression": [
+        "Progress Blindseer by helping Pathfinders in the Depth Trial.",
+        "The first mantra unlocks after helping 1 Pathfinder, the second after 3, and the final after 5.",
+        "A passive Talent is also unlocked after helping 4 Pathfinders (triggered after a brief exit post the Voice of Authority).",
+        "Note: Helping players with Oathless will not count for progression."
+      ],
+      "effects": [
+        "+1 Wildcard Mantra Slot",
+        "+1 Support Mantra Slot",
+        "+10 Sanity"
+      ],
+      "abilities": [
+        {
+          "name": "Mindsoothe - Support Mantra",
+          "description": "Heals nearby allies for 60 HP at the cost of your Sanity. The Sanity cost is only deducted on a successful heal. Has a 60-second cooldown. Hold F during the cast animation to heal everyone in range, regardless of ally status. Does not work on NPCs. (Obtainment: Help 1 Pathfinder in the Depth Trial)"
+        },
+        {
+          "name": "Tranquil Circle - Support Mantra",
+          "description": "Creates a circle that disables mantra use for everyone within its radius, including the caster, but grants complete immunity to mantra damage while inside. Also adds 10% Monster Armor to players in the area. Can be modified with a Magnet Spark to reduce the circle's size while making it follow you. (Obtainment: Help 3 Pathfinders in the Depth Trial)"
+        },
+        {
+          "name": "All-Seeing Eye - Passive",
+          "description": "Your mystic eye reveals invisible foes and players under various cloaking effects by displaying a Blindseer Eye icon. This Talent nullifies Tacet Murmur, allowing you to see cloaked players normally. (Obtainment: Help 4 Pathfinders in the Depth Trial)"
+        },
+        {
+          "name": "Sightless Beam - Combat Mantra",
+          "description": "Fires a high-pressure beam from your eyes dealing around 150 base damage, with extra damage and posture at the start. It can be canceled midway by pressing F. The beam also steals eyesight to trigger the blind effect if enough hits land. (Obtainment: Help 5 Pathfinders in the Depth Trial)"
+        }
+      ],
+      "notes": "Having the Blind Flaw removes the need for a blindfold. Blindseer grants full vision and increased brightness while wearing a Blindfold, and cures the Blindness flaw. When wearing a Blindfold, you are immune to Gaze. For Vesperians, the mask displays a gold eye on a gray background.",
+      "trivia": [
+        "Blindseer mantras do not scale with Willpower.",
+        "You can reroll the Mental Fortress Talents and still keep the Oath.",
+        "Glyphs at Summer Isle and the Lightkeeper Temple offer hints on progressing Blindseer if not discovered by trial and error.",
+        "The Blindseer Eye can be dyed using a Dye Packet.",
+        "Vesperians with Blindseer have a different visual presentation compared to non-Vesperians.",
+        "A bug causes the mask decoration to persist even after the Oath is removed.",
+        "Inspired by an interview with Raguza, referencing the idea of 'seeing the truths of the world' when wearing a blindfold."
+      ],
+      "references": [
+        "View source"
+      ],
+      "navigation": "N/A"
+    },
+    {
+      "name": "Chainwarden",
+      "oath_requirement": "Friend+ Reputation with The Central Authority; A sum of 40 points invested in Strength, Fortitude, and Willpower",
+      "description": "Oath: Chainwarden is one of the 16 obtainable Oaths in Deepwoken. This Oath specializes in conjuring chains on foes to cripple their mobility while providing mantras that deal significant true damage if used correctly. Chainwardens serve The Central Authority, enacting justice by condemning and punishing those who oppose it.\n\n“What is it? You had better not be wasting my time. There's filth that requires scraping off the map.” ― Vice Warden Morredh",
+      "mystic_quote": "",
+      "obtainment": [
+        "Invest a combined 40 points in Strength, Fortitude, and Willpower (e.g., 20 STR, 5 FORT, 15 WILL or 0 STR, 30 FORT, 10 WILL).",
+        "Speak to Vice Warden Morredh in Fort Merit while having Friend+ reputation with The Central Authority.",
+        "Retrieve a hostage below the Castle Ruins at Summer Isle and then return up the ladder.",
+        "This will spawn Emar Vend (a rogue Chainwarden with a Darksteel Greatsword and Ironsing mantras). After gaining kill credit, return to Vice Warden Morredh to receive the Oath.",
+        "Chainwarden cannot be reobtained if you Oathbreak it; the Vice Warden will insult you."
+      ],
+      "progression": "Progress the Oath by either gripping players with Hunted or low reputation while chaining them or defeating major humanoid bosses (such as Duke Erisia, Maestro Evengarde Rest, or The Ferryman).",
+      "effects": [
+        "+1 Wildcard Mantra Slot",
+        "+2 Combat Mantra Slots"
+      ],
+      "abilities": [
+        "Restrain (Combat Mantra): Deliver a powerful kick that binds your opponent’s soul with a chain. Deals true damage and applies a chain that halts mobility. (Note: Currently bugged—Bloodless Gem does not work with this mantra.)",
+        "Impel (Combat Mantra): Blast through your opponent’s guard and pull them toward you. Fires 4 dark blasts at your cursor; enemies hit by at least 3 blasts are chained and then pulled and kicked away. (15s cooldown)",
+        "Rupture (Combat Mantra): Detonate your chained target, readying two punches that deal damage and daze on hit. On a chained target, pull on the chain to explode enemies away from your camera. (Can be modified with a reversal spark to reverse the direction)",
+        "Perpetual Wrath (Passive): Each successive hit with Restrain increases its damage (stacks per target). After 3+ uses, casting Restrain will trigger an AOE blast.",
+        "Chain Lash (Passive): On flourish, whip your chain to pull enemies toward you, setting them up for a crushing kick (approximately 45 damage). The chain from Restrain can be used for Rupture."
+      ],
+      "gallery": [
+        "Old icon",
+        "Old icon"
+      ],
+      "trivia": [
+        "Restrain chains the opponent even if the hit was blocked.",
+        "Chains break if the distance between user and victim reaches 40 studs.",
+        "Restrain has nearly no cooldown if you land the mantra (works if dodged or blocked, but not when parried) and only goes on cooldown if whiffed.",
+        "Chained targets are slowed when they run away.",
+        "An enemy can only be chained by one Chainwarden at a time.",
+        "Using Rupture on a chained target breaks the chain and ragdolls the target in the direction of your camera.",
+        "Emar Vend may sometimes fail to spawn; rejoining on a new server can fix this.",
+        "Originally, Chainwarden was a very small Oath with only 2 mantras and no passives/talents, but it has been updated.",
+        "Due to its easy requirements, it can be obtained on almost any build.",
+        "This is one of four Oaths where progression cannot be skipped with knowledge (others: Bladeharper, Saintsworn, Soulbreaker)."
+      ],
+      "references": [
+        "View source"
+      ],
+      "navigation": "N/A"
+    },
+    {
+      "name": "Contractor",
+      "oath_requirement": "Positive reputation with Etrea and The Ministry; Obtained Resonance; Sum of 40 points invested in Strength, Fortitude, and Willpower",
+      "description": "Oath: Contractor is one of the 16 obtainable Oaths in Deepwoken. This Oath offers a versatile offensive playstyle with gap closers, counters, and ranged grabs. It allows you to manipulate the Puppet Strings of Zi'eer by vowing with the malevolent King of Etrea—and, by extension, The Ministry—to help sink Etrea into The Depths.",
+      "mystic_quote": "Then you are bound to me. As one of my strings, you are to descend into the depths and extinguish the souls of those who have given their oaths to others.",
+      "obtainment": [
+        "Obtain neutral or positive reputation with The Ministry (this can be done via bounties or helping Ministry members in Summer Isle) while maintaining positive reputation with Etrea.",
+        "Start the Duke Erisia questline and get kill credit for the Duke.",
+        "Speak with the Lord Regent and (optionally) choose the special dialogue “Bite your tongue” (it is safer to avoid speaking with him until all other steps are completed).",
+        "Make deals with 4 different Deep Shrines (any Shrine except the Shrine of Solitude and Shrine of Mastery will work) to unlock your Resonance.",
+        "Visit Yun'Shul's shrine in the Depths and ask, \"What happened to this place?\" (Note: This requires the 4 Deep Shrine deals to be completed first).",
+        "Return to the Lord Regent and select the dialogue option to join him (if you choose the option to stop him, he will kill you)."
+      ],
+      "progression": "To progress the Oath, as instructed by the Lord Regent, you must grip players with Oaths in Layer 1 (this sends them to Layer 2). You must be the sole contributor of damage for the grip to count. Progression steps are: 1st Grip – Hidden Tendril and Lords Slice; 2nd Grip – Equalizer; 3rd Grip – String Trick and Judgement. Alternatively, if you’ve already progressed Contractor once after 26/04/2024, you can spend 10 knowledge to immediately max out the Oath.",
+      "effects": [
+        "+2 Combat Mantra Slots",
+        "+10 Ether"
+      ],
+      "abilities": [
+        "Hidden Tendril (Passive, +10 Ether): Landing any physical mantra (including physical criticals, uppercuts, and flourishes) applies a Hidden Tendril to the target. (Does not affect Non-Humanoids.)",
+        "String Trick (Passive): Pulls together any two opponents that have been attached with Hidden Tendril.",
+        "Judgement (Combat Mantra): Summon a black casting circle to envelop a humanoid target in tendrils and tear them apart. The target is immobilized and gains invincibility frames; if its HP is reduced to 0 or if it is knocked, it is instantly executed. (Can be vented or parried on hearing a 'snap' sound; deals 60 Oath damage.)",
+        "Lords Slice (Combat Mantra): Contracts the Hidden Tendril, pulling both you and your target closer before flinging you apart. The target suffers extra damage and blood loss. (Only usable if Hidden Tendril is applied; deals true damage.)",
+        "Equalizer (Combat Mantra): Whips forward with your Tendril to gain a blue aura. If it connects, it deals damage and stuns the attacker for about 2 seconds. (Non-Humanoids bypass the counter aura.)",
+        "Perpetual Wrath (Passive): Each successive use of Restrain increases its damage (stacks independently per target). After 3+ uses, casting Restrain triggers an AOE blast.",
+        "Chain Lash (Passive): On flourish, whip your chain to pull enemies toward you, setting them up for a crushing kick that deals approximately 45 damage. (The chain from Restrain can also be used for Rupture.)"
+      ],
+      "gallery": [
+        "ContractorNewIcon"
+      ],
+      "trivia": [
+        "Contractor can be skipped using 10 knowledge if the Oath has been progressed normally once after 26/04/2024.",
+        "Upon obtaining this Oath, reputation with The Divers is moderately lowered (neutral becomes Hunted); reputation may be regained through various actions.",
+        "Members of The Divers' guild do not have their reputation drained when swearing this Oath.",
+        "Contractor is not reobtainable if you Oathbreak it—the Lord Regent will kill you if you try.",
+        "The Contractor strings feature a red exterior with a black interior.",
+        "The previous intelligence requirement has been removed; Contractor mantras no longer scale with INT.",
+        "Dialogue with Duke Erisia changes upon obtaining this Oath."
+      ],
+      "references": [
+        "View source",
+        "Video guide: [Insert YouTube link here]"
+      ],
+      "navigation": "N/A"
+    },
+	{
+      "name": "Contractor",
+      "oath_requirement": "Positive reputation with Etrea; Positive reputation with The Ministry; Obtained Resonance",
+      "description": "Oath: Contractor is one of the 16 obtainable Oaths in Deepwoken. This Oath offers varying combat abilities ranging from gap closers, counters, and ranged grabs, allowing for a versatile and offensive playstyle. It enables you to manipulate the Puppet Strings of Zi'eer by vowing with the malevolent King of Etrea—and by extension, The Ministry.",
+      "mystic_quote": "Then you are bound to me. As one of my strings, you are to descend into the depths and extinguish the souls of those who have given their oaths to others. – Zi'eer",
+      "obtainment": [
+        "Obtain neutral or positive reputation with The Ministry (via bounties or helping Ministry members in Summer Isle).",
+        "Help the Ministry 5 times to boost your reputation.",
+        "Start the Duke Erisia questline and secure kill credit for the Duke.",
+        "Speak with the Lord Regent and choose the dialogue option “Bite your tongue”.",
+        "Make a deal with 4 different Deep Shrines (any Shrine except the Shrine of Solitude and Shrine of Mastery will work) to unlock your Resonance.",
+        "Visit Yun'Shul's shrine in the Depths and ask, 'What happened to this place?' (requires the 4 Deep Shrine deals).",
+        "Return to the Lord Regent and select the dialogue option indicating you understand his true nature."
+      ],
+      "progression": "Progress the Oath by gripping players with Oaths in Layer 1 (this sends them to Layer 2) with the following steps: 1st Grip – Hidden Tendril and Lords Slice; 2nd Grip – Equalizer; 3rd Grip – String Trick and Judgement. Alternatively, if you’ve already progressed once after 26/04/2024, you can spend 10 knowledge to immediately max out the Oath.",
+      "effects": [
+        "+2 Combat Mantra Slots",
+        "+10 Ether"
+      ],
+      "abilities": [
+        "Hidden Tendril (Passive, +10 Ether): Landing any physical mantra (including criticals, uppercuts, flourishes, and most attunement-less mantras) applies a Hidden Tendril on the target.",
+        "String Trick (Passive): Pulls together any two opponents that have been affected by Hidden Tendril.",
+        "Judgement (Combat Mantra): Summon a black casting circle to envelop a humanoid target in tendrils and tear them apart. The target gains invincibility frames and is instantly executed if its HP drops to 0 or if used on a knocked target. (Deals 60 Oath damage.)",
+        "Lords Slice (Combat Mantra): Contracts the Hidden Tendril, pulling both you and the target closer before flinging you apart, causing extra damage and blood loss. (Deals true damage.)",
+        "Equalizer (Combat Mantra): Whips forward with your tendril to gain a blue aura. If it connects, it deals damage and stuns the attacker for about 2 seconds."
+      ],
+      "trivia": [
+        "Contractor can be skipped using 10 knowledge if the Oath has already been progressed normally at least once after 26/04/2024.",
+        "Upon obtaining this Oath, reputation with The Divers is moderately lowered (neutral becomes Hunted); reputation may be regained through specific in-game actions.",
+        "Contractor is not reobtainable if you Oathbreak it—the Lord Regent will kill you if you attempt to regain it.",
+        "Contractor strings are red on the outside and black on the inside.",
+        "Contractor mantras no longer scale with Intelligence as of the 5/15/23 update.",
+        "Dialogue with Duke Erisia changes upon obtaining this Oath."
+      ],
+      "references": [
+        "View source",
+        "Video guide: [Insert YouTube link here]"
+      ],
+      "navigation": "N/A"
+    },
+	{
+      "name": "Dawnwalker",
+      "oath_requirement": "30 Kyrsan Medallions; Power 15",
+      "description": "Oath: Dawnwalker is one of the 16 obtainable Oaths in Deepwoken. It focuses mainly on high damage output. Together with Oathless, Linkstrider, Contractor, and Fadetrimmer, it is one of 5 Oaths that have no direct stat requirements. Despite this, it is one of the hardest Oaths to obtain, requiring multiple expeditions into New Kyrsa, The Sleeping City to both obtain and fully upgrade.",
+      "mystic_quote": "Child, do you swear to carry the Light as a weapon against the Deep? To wield the Song only as a Radiant Blade against that which it beckons? – Klaris Llfiend, Mother of Lights",
+      "obtainment": [
+        "Speak to Klaris Llfiend in Castle Light and ask to learn the secret of 'radiant magic' (costs 30 Kyrsan Medallions; available only when you reach Power 15 or above).",
+        "Upgrade the Oath by spending 15 Kyrsan Medallions per skill. The upgrade order is:",
+        "  • Blinding Dawn upon Oath obtainment (30 medallions, or 60 if Oath broken)",
+        "  • Radiant Kick (15 medallions)",
+        "  • Protagonist Syndrome and Radiant Dawn (15 medallions)",
+        "  • Absolute Radiance + Luminous Flash (15 medallions)",
+        "Reobtaining Dawnwalker after Oath breaking costs 60 Kyrsan Medallions."
+      ],
+      "effects": [
+        "+2 Combat Mantra Slots",
+        "Changes eye color to white and creates a dyeable Moonseye symbol above the head."
+      ],
+      "abilities": [
+        "Blinding Dawn (★★★) – Combat Mantra: Spin rapidly to unleash powerful rays of light. Deals 18 hits with 9.333 base damage per hit.",
+        "Radiant Kick (★★★) – Combat Mantra: Kick your foes at the speed of light; deals a base of 19.5 Oath damage twice.",
+        "Radiant Dawn (★★★) – Combat Mantra: Strike down your foes with blinding light. Deals 46.5 base Oath damage; is unparriable, guardbreaks if attempted, and requires the player to hit the floor after the initial leap for the explosion to trigger."
+      ],
+      "trivia": [
+        "If you have already maxed out Dawnwalker on a slot, you only need 40 Kyrsan Medallions to max out the Oath.",
+        "Dawnwalker is a nerfed version of the developer's initial specifications.",
+        "On release, Radiant Kick was exceptionally powerful—capable of dealing half a bar of undodgable damage and propelling foes across the Nomad camp.",
+        "The passive Luminous Flash may be inspired by Black Flash from Jujutsu Kaisen, and Absolute Radiance may reference Hollow Knight's final boss.",
+        "Blinding Dawn might draw inspiration from Goro Majima's spinning power moves in Yakuza 0, while Radiant Kick may be reminiscent of Minos Prime's 'Judgement!' attack in ULTRAKILL.",
+        "Dawnwalker uses Radiant Magic, which imitates Lightkeeping through the use of Radiant Tones.",
+        "Originally, Dawnwalker had a mode bar for instant TP dashes and a talent for fall damage immunity—both concepts were later scrapped.",
+        "It is the only Oath (besides Fadetrimmer and Soulbreaker) that can be fully obtained and progressed without leaving the Depths."
+      ],
+      "references": [
+        "View source",
+        "Video guide: [Insert YouTube link here]"
+      ],
+      "navigation": "N/A"
+    },
+	{
+      "name": "Fadetrimmer",
+      "oath_requirement": "Power 12; 12 non-unique haircuts",
+      "description": "Oath: Fadetrimmer is one of the 16 obtainable Oaths in Deepwoken. It's a utility Oath that grants you the abilities of a barber—giving you a pair of seemingly sentient scissors to fix hairlines and trims. Together with Oathless, Linkstrider, Contractor, and Dawnwalker, it is one of 5 Oaths that have no direct stat requirements.",
+      "mystic_quote": "“ Whatever, man. ” – Your Scissors upon an Oathbreak",
+      "obtainment": [
+        "Meet the following requirements: Power 12+ and change your hair 12 times at any Barber (if you changed your hair enough before reaching Power 12, you do not need to repeat the step).",
+        "Talk to a barber and choose the dialogue option “How is it you're able to do all this stuff?” to take the Oath.",
+        "For a more in-depth walkthrough, consider watching a video guide."
+      ],
+      "effects": [
+        "+1 Combat Mantra Slot",
+        "+1 Wildcard Mantra Slot"
+      ],
+      "abilities": [
+        "Precision Cuts (★★★) – Combat Mantra: Snip forward 3 times with your scissors. Deals 60 Oath DMG with 0 songchant and 67.86 Oath DMG with 6 songchant (approximately 22.62 per hit).",
+        "Close Shave (★★★) – Combat Mantra: Close the distance and deliver a fast slash. Deals 50 Oath DMG with 0 songchant and 56.56 Oath DMG with 6 songchant. Can also be used for movement.",
+        "Fadetrimmer's Skillset (Passive): Alters the haircut given by Precision Cuts (or Close Shave) and also allows you to change your own hair. (Note: Do not use hair IDs that can be seen as offensive.)",
+        "Hair Products (Passive): Displays a popup menu to select a product – Flammable (ignites opponents), Charming (charms opponents for 15 seconds), or Revitalizing (heals a flat 10% HP).",
+        "Hair Spray (Passive): Applies the selected Hair Product spray to an opponent."
+      ],
+      "trivia": [
+        "The Fadetrimmer Oath was mentioned by the Barbers since August 22, 2022, and was officially added on July 24, 2023.",
+        "Originally started as a community joke regarding its obtainment method, it has since gained functional support uses in PvE.",
+        "Revitalizing can be used on multiple allies for support, on par with the Reinforce ability.",
+        "Haircuts given via this Oath remain on the target for ten minutes or until you leave the server.",
+        "The description is a nod to the 'Ginger Fringe Incident' meme."
+      ],
+      "references": [
+        "View source"
+      ],
+      "navigation": "N/A"
+    },
+	{
+      "name": "Jetstriker",
+      "oath_requirement": "50 Agility",
+      "description": "Oath: Jetstriker is one of the 16 obtainable Oaths in Deepwoken. It is highly praised (and detested) for its fluidity in agility, making it popular for 'Trackstar' builds. This Oath allows the user to quickly escape engagements if they know what they're doing. Journey before destination.",
+      "mystic_quote": "“Journey before destination.” – Alirian",
+      "obtainment": [
+        "Have at least 50 Agility.",
+        "Talk to Alirian at Minityrsa's Frozen Pond, past the Rogue Construct and near the left ridge.",
+        "Beat Alirian in a race to a specific yellow-marked point (waiting until she stops at the marker if needed).",
+        "Note: This Oath does not become locked after breaking it at Yun'Shul."
+      ],
+      "progression": "Alirian will ask you to find 5 Orbs scattered in the Etrean Luminant; each orb grants one Talent in a fixed order. Alternatively, spend 10 Knowledge to immediately unlock all related Talents.",
+      "effects": [
+        "+1 Wildcard Mantra Slot",
+        "+1 Mobility Mantra Slot",
+        "+8 Passive Agility",
+        "+5 Health (from all Talent effects)",
+        "+5 Ether (from all Talent effects)",
+        "+12 Passive Agility (from all Talent effects)"
+      ],
+      "abilities": [
+        "Acceleration Points – Talent: Striking an opponent in the back with mobility mantras or basic attacks steals and grants additional momentum (+5 Passive Agility).",
+        "Jetstream Pursuit – Talent: Upon a successful flourish, teleport to the opponent when they stop moving and receive a significant boost of momentum.",
+        "Momentum Bar – Passive: Parrying, dodging, running, and basic attacks build up a momentum bar; when maxed, mantras deal more damage and change color according to the Oath’s cosmetic.",
+        "Stratos Step – Talent: While wall-boosting, hold space at the end to gain an extra upward boost (+5 Health, +3 Passive Agility). Up to two consecutive boosts are allowed before cooldown.",
+        "Decisive Winds – Talent: When damaged below 50% health, gain maximum sprint momentum temporarily (+5 Ether).",
+        "Rush of Ancients – Talent: Dashing at maximum sprint momentum makes you one with the wind—granting brief invisibility and full intangibility during the dash (+4 Passive Agility).",
+        "Fake Strike – Combat Mantra: Trick your opponent and quickly move behind them.",
+        "Jet Kick – Mobility Mantra: Rush forward with a jet kick (requires a target if in combat; base damage of 30)."
+      ],
+      "notes": "",
+      "trivia": [
+        "Favored by 'Trackstar' builds due to its exceptional mobility.",
+        "Updated on March 29, 2024, to include new mantra effects and talent tweaks.",
+        "Dyeing the Jetstriker Anklets also changes the color of the dash effects and momentum bar."
+      ],
+      "references": [
+        "View source"
+      ],
+      "navigation": "N/A"
+    },
+	{
+      "name": "Linkstrider",
+      "oath_requirement": "None",
+      "description": "Oath: Linkstrider is one of the 16 obtainable Oaths in Deepwoken. It specializes entirely in support—offering buffs, heals, and debuffs to control the battlefield. The Oath is acquired by taking the lives of 4 players and performing a ritual at the Entropy Catalyst, allowing you to manipulate the bonds between souls. Although its benefits shine in group play, it is less effective for solo players.",
+      "mystic_quote": "“The world is broken, linked by fragile webs.” – Entropy Link Description",
+      "obtainment": [
+        "Entropy Catalyst Method: Knock 4 different players with Oaths, take them to the Entropy Catalyst, place them in the craters (sacrificing them sends them to the depths), then interact with the white orb that appears in the middle.",
+        "Pristine Lotus Method: Collect 4 Pristine Lotuses around the Entropy Catalyst, grip 4 players with Oaths (they can be the same player) to convert each into a Scarlet Lotus, then return with 4 Scarlet Lotuses and interact with the white orb.",
+        "Note: Linkstrider can be reobtained if you Oathbreak it."
+      ],
+      "progression": "Progress by gripping players with Oaths: 4 grips to obtain the Oath and 4 additional grips to fully progress it, which unlocks Entropy Link, Symbiotic Link, Symbiotic Sustain, and Parasitic Leech. Alternatively, you can spend 10 knowledge on a previously progressed character to skip the progression.",
+      "effects": [
+        "+2 Support Mantra Slots",
+        "+1 Wildcard Mantra Slot"
+      ],
+      "abilities": [
+        "Entropy Link – Talent: Allows fast travel to certain campfire-locked locations by interacting with meteorites scattered around the map. (Note: Requires an actual lit campfire and is not usable in combat.)",
+        "Symbiotic Link – Talent: Activate by pressing X while hovering over an ally or enemy. Blue cords grant allies a speed boost, 20% damage resistance, and 5% damage increase; red cords impose a minor speed debuff on enemies. Only one cord of each type may exist at once.",
+        "Symbiotic Sustain – Mantra: If linked to an ally via a blue cord, sacrifice 7% of your HP to restore 15% of the target's HP. (17.5-second cooldown.)",
+        "Parasitic Leech – Mantra: If linked to an enemy via a red cord, steal HP from the target over time based on a percentage of their total HP."
+      ],
+      "notes": "",
+      "trivia": [
+        "Considered one of the worst Oaths for solo play due to its group support focus.",
+        "Acquisition requires a ritual at the Entropy Catalyst and 4 player grips."
+      ],
+      "references": [
+        "https://deepwoken.fandom.com/wiki/Linkstrider",
+        "View source"
+      ],
+      "navigation": "N/A"
+    },
+	{
+      "name": "Saintsworn",
+      "oath_requirement": "20 Flamecharm, 20 Thundercall, 20 Frostdraw, 20 Galebreathe, 20 Shadowcast; resonate with every attunement obelisk.",
+      "description": "Saintsworn is an Oath relating to the usage of multiple attunements and Hero's Blades. It allows you to harness the power of the souls of the Five Heroes and wield their abilities in combat with their souls watching over your strife.",
+      "obtainment": [
+        "Requires 20 investment points in each attunement (Flamecharm, Galebreathe, Shadowcast, Frostdraw, Thundercall).",
+        "After meeting the stats, interact with every obelisk:",
+        "  • Thundercall: Sail to the Boatman's Watch, enter a cave, talk to Tessa.",
+        "  • Galebreathe: Tread carefully to Garden's Reservoir at Upper Erisia, talk to Trinity Galenwarde.",
+        "  • Flamecharm: Go to Miner's Landing (Saramaed Summit), talk to Jace.",
+        "  • Frostdraw: Climb to the Crypt of the Unbroken, break open the bookshelf, talk to Faust.",
+        "  • Shadowcast: Sail to the Moon’s Eyrie, talk to Urek Felhand.",
+        "Note: Saintsworn cannot be reobtained if you Oathbreak it. Also, you don’t need a Hero Blade equipped to obtain this Oath."
+      ],
+      "effects": [
+        "+2 Combat Mantra Slots",
+        "+2 Support Mantra Slots",
+        "+1 Wildcard Mantra Slot"
+      ],
+      "progression": "Complete World Events (The Doom of Caeranthil, Interluminary Parasol, Carnival of Hearts). First completion grants Ether Proselyte, Hero's Assist, and Saint's Negation; second completion grants Saint's Synergy and Saint's Overload.",
+      "abilities": [
+        "Saintsworn: Flamecharm Saint Stance",
+        "Saintsworn: Galebreathe Saint Stance",
+        "Saintsworn: Shadowcast Saint Stance",
+        "Saintsworn: Frostdraw Saint Stance",
+        "Saintsworn: Thundercall Saint Stance"
+      ],
+      "passives": {
+        "saintsblade": "Press 'L' to swap to the Saintsblade (30 DMG, 10% PEN, 1.04x swing speed).",
+        "saint_stances": "Cycle through 5 stances (each corresponds to an attunement) with unique Hero's Assist effects.",
+        "heros_assist": [
+          "Flamecharm: Summon Hero of Flame upon flourishing, triggering 3 eruptions.",
+          "Galebreathe: Summon Hero of Gale on uppercut/block-break to fire a mini Tornado.",
+          "Shadowcast: Summon Hero of Shadow upon parrying, applying an AoE effect.",
+          "Frostdraw: Summon Hero of Frost upon landing a Frostdraw mantra, launching ice projectiles.",
+          "Thundercall: Summon Hero of Thunder upon first mantra cast, increasing windup and damage."
+        ]
+      },
+      "dialogue": [
+        "Flamecharm Obelisk (Jace): \"I've seen what happens when fire burns too hot. It leaves nothing behind but ruin.\"",
+        "Galebreathe Obelisk (Trinity Galenwarde): \"You must decide, seeker. Will you let the wind carry you, or will you struggle against its pull?\"",
+        "Shadowcast Obelisk (Urek Felhand): \"Once, I stood with the Five, a hero among them. But loyalty? It's a fragile thing.\"",
+        "Frostdraw Obelisk (Faust): \"Ah, a seeker of knowledge, or perhaps just a fool seeking the ice...\"",
+        "Thundercall Obelisk (Tessa): \"Thundercall, huh? You want that power? That zing that comes with it?\""
+      ],
+      "trivia": [
+        "Created by Dexerius, along with Arcwarder and Visionshaper.",
+        "Saintsworn’s Saintsblade has the highest base M1 damage (30) among base weapons.",
+        "Does not require a Hero Blade to obtain the Oath.",
+        "Gives 5 total mantra slots, making it the most flexible Oath."
+      ],
+      "references": [
+        "https://deepwoken.fandom.com/wiki/Saintsworn",
+        "Video guide: [Insert YouTube link here]"
+      ],
+      "navigation": "N/A"
+    },
+	{
+      "name": "Saltchemist",
+      "oath_requirement": "75 Intelligence; Complete Ciea's quest (1 time)",
+      "description": "Oath: Saltchemist is one of the 16 obtainable Oaths in Deepwoken. It's a highly customizable utility-based Oath centered around alchemy. Its benefits and applications vary based on the potions in your arsenal, allowing for various buffs to yourself and debuffs to your enemies.",
+      "mystic_quote": "“Every atom, every bond. You understand that All is One, and One is All.” – Drinking the Root Panacea",
+      "obtainment": [
+        "Make at least one potion for Ciea.",
+        "Obtain 75 Intelligence (no need to unbound).",
+        "Speak to Adrofalis in Ferryman's Library. Bring the following ingredients: Celestial Ichor (from the blood pool of a Celestial in Derelict Highchurch), Stardust from a Star Tree (preferably get a second one), and any Lotus (commonly found in Voidzones; Saramaed Summit is a good option).",
+        "Return to Adrofalis to receive the Oath. (Upon obtaining the Oath, you gain the Perpetual Distillery on your arm.)"
+      ],
+      "progression": "Obtain a Vibrant Gem, Pluripotent Alloy, and a Stardust, then craft them together to unlock all three Salt Talents at once (this only consumes the Stardust).",
+      "effects": [
+        "+1 Wildcard Mantra Slot",
+        "+1 Support Mantra Slot",
+        "+20 Carryload"
+      ],
+      "abilities": {
+        "perpetual_distillery": "Your body becomes a distillery for alchemy—gain 3 autobrew slots that automatically produce chosen potions. The potions are infinite and scale in potency as your Intelligence increases.",
+        "biotic_salts": "Alters your brews so that negative effects for allies (and positive effects for enemies) are halved.",
+        "aromatic_salts": "Creates lingering clouds of mist on potion shattering that count as additional potion applications (lasting roughly 10 seconds).",
+        "antithetic_salts": "Inverts the effects of potion ingredients (e.g. converting beneficial effects into detrimental ones).",
+        "lethal_injection": "Lunge forward and inject the target with all auto-brew potions, applying all the negative effects while dealing a small amount of damage and hit-stun."
+      },
+      "location": "The tower is located next to the Ferryman's ritual.",
+      "trivia": [
+        "Saltchemist is the only Oath that requires Intelligence.",
+        "Originally, Contractor was the Intelligence Oath before losing its INT requirement.",
+        "The concept of an Alchemist Oath was conceived early on and revived with Verse 2."
+      ],
+      "references": [
+        "https://deepwoken.fandom.com/wiki/Saltchemist"
+      ],
+      "navigation": "N/A"
+    },
+	{
+      "name": "Silentheart",
+      "oath_requirement": "Attunement-less; a sum of 75 points invested in weapon stats; 25 Strength; 25 Charisma OR Agility; must be gripped by an attunement user",
+      "description": "Oath: Silentheart is one of the 16 obtainable Oaths. It sacrifices mantras and attunements in exchange for the ability to change weapons during battle and a unique set of integrated attacks.",
+      "mystic_quote": "“Your old heart is no more, hateful one. We have exchanged it for one aligned with our ideals, deafened to the chaos of the Song. You are Silent now, hateful one.” – The Dreadstar",
+      "obtainment": [
+        "Be attunementless",
+        "Have a total of 75 points in weapon stats (e.g. 25/25/25 for Light, Medium, and Heavy)",
+        "Have 25 points in Strength",
+        "Have 25 points in either Charisma or Agility",
+        "Die to a player that uses an attunement (note: Chime of Conflict and Second Layer grips do not count)",
+        "After meeting these requirements, speak with the Beloved Zofia in the Voidsea to talk to The Dreadstar"
+      ],
+      "progression": "Progress the oath by killing attunement trainers (excluding Regek, Beatra, and Vyrelda) in a recommended order.",
+      "effects": [
+        "Wield weapons with 25 investment points lower than the weapon stat requirement",
+        "Lose access to cast any mantras (learned or otherwise)",
+        "Attunements become unusable",
+        "Gain glowing red tattoos on arms and torso",
+        "Eye color becomes duller and darker",
+        "All Silentheart moves deal doubled damage in PvE",
+        "Silentheart moves deal Oath damage rather than slash/weapon/mantra damage"
+      ],
+      "abilities": {
+        "ankle_cutter": "Perform a special ground slash while sliding that applies a temporary speed debuff to those hit (5s cooldown; scales with weapon damage).",
+        "dread_fighter": "Parrying or getting hit by mantras grants stacks of Dread that increase mantra resistance for 15 seconds.",
+        "flow_state": "Activate a brief (1s) state that lets you adjust the windup of your special attacks (≈4s cooldown).",
+        "mayhem": "Initiate a special dash attack by pressing M1 during the start of your dodge (11s cooldown per weapon type).",
+        "merciless_blade": "Execute enemies faster; increases grip speed by 25%.",
+        "relentless_hunt": "Use M1 during an aerial attack to gap-close (11s cooldown per weapon type).",
+        "rising_star": "Activate a special uppercut attack via your crouch/feint keybinds (7.5s cooldown per weapon type).",
+        "true_vantage": "Landing a vent briefly grants invisibility and a speed boost (visuals change based on dye).",
+        "unmatched_dexterity": "Allows manual weapon swapping with a keypress (cycles through your toolbar).",
+        "vengeful_pursuit": "Running M1s that miss send out a mid-range projectile that slows targets (8s cooldown)."
+      },
+      "notes": "If you Oathbreak Silentheart while wielding a weapon that no longer meets the lowered requirements, you will receive a penalty of 35% less melee damage.",
+      "trivia": [
+        "Silentheart has the most talents of any oath – a total of 11.",
+        "The glowing tattoos and altered eye color are unique visual cues for Silentheart.",
+        "The oath rejects the Words of the Song; all mantras become inaccessible once taken."
+      ],
+      "references": [
+        "https://deepwoken.fandom.com/wiki/Silentheart"
+      ],
+      "navigation": "N/A"
+    },
+	{
+      "name": "Soulbreaker",
+      "oath_requirement": "Any Murmur; a Resonance (dependant); Hero Reputation with Etrea (dependant); 50 points in Charisma or Willpower (combined)",
+      "description": "Oath: Soulbreaker is one of the 16 obtainable Oaths in Deepwoken. It is related to Murmurs, specifically granting the ability to wield three at once. Upon obtaining this Oath, purple-glowing white strands of energy attach to your shoulders and wrap behind your head, with constant Ardour particles emitting from your chest. Any weapon you equip will have purple and black lightning humming around it.",
+      "mystic_quote": "“ Some say that the king struck a bet with the Mur and won her heart, and all of us in this Kingdom her Light... Some day we'll see it again. I'm sure of it. ” – Theadre",
+      "obtainment": [
+        "Have at least 50 points combined into Willpower and Charisma (e.g. 25 Willpower and 25 Charisma or 0 Willpower and 50 Charisma)",
+        "Have any Murmur",
+        "Either have Hero Reputation with Etrea or have a Resonance (Resonance is not required to unlock dialogues with Theadre and Bookkeeper Andros)",
+        "Have at least one Yun'Shul wish",
+        "Talk to Theadre about the King of Etrea being a god",
+        "Talk to Bookkeeper Andros about the King's Ardour following the dialogue order: 3, 1, 1, 2, 1, 1, 1",
+        "Then, head to the Temple of Hearts in the First Layer to talk to the Shrine of Yun'Shul, Keeper of Hearts and choose the dialogue 'For now I am one, but I wish to be three.'",
+        "Alternatively, enter Duke Erisia's Manor, kill Duke Ishamon Erisia, and use a Sinner's Ash before teleportation (requires a Murmur)"
+      ],
+      "progression": "Progress this Oath by making deals with Deep Shrines (excluding the Shrine of Solitude) or by making wishes with the Shrine of Yun'Shul, Keeper of Hearts up to 5 times to max it out.",
+      "effects": [
+        "+2 Combat Mantra Slot",
+        "+1 Wildcard Mantra Slot",
+        "Ability to wield all the Murmurs"
+      ],
+      "abilities": {
+        "talents": [],
+        "mantras": []
+      },
+      "trivia": [
+        "This is one of four Oaths where you cannot skip progression with knowledge (the others being Bladeharper, Saintsworn, and Chainwarden).",
+        "It is recommended to use the Shrine of Mastery or Shrine of Conceit to progress this Oath, as they only use 1 Knowledge each time."
+      ],
+      "references": [
+        "https://deepwoken.fandom.com/wiki/Soulbreaker"
+      ],
+      "navigation": "N/A"
+    },
+	{
+      "name": "Jetstriker",
+      "oath_requirement": "50 Agility",
+      "description": "Oath: Jetstriker is one of the 16 obtainable Oaths in Deepwoken. It is highly praised (and detested) for its fluentness in agility, leading to Trackstar builds that can quickly escape any engagement if the user knows what they're doing. Journey before destination.",
+      "mystic_quote": "I can begrudgingly congratulate you! No more easy race wins for me, I suppose! – Alirian",
+      "obtainment": [
+        "Have at least 50 Agility.",
+        "Talk to Alirian at Minityrsa's Frozen Pond, far past the Rogue Construct beyond the bridge and to the left ridge.",
+        "Beat Alirian in a race to a specific point marked with a yellow marker (wait below the marker until she stops).",
+        "This Oath does not become locked after breaking it at Yun'Shul."
+      ],
+      "progression": "Alirian will ask you to find 5 Orbs scattered in the Etrean Luminant. Each Orb grants one Talent in order regardless of obtainment order. Alternatively, spend 10 Knowledge to immediately unlock all related Talents.",
+      "effects": [
+        "+1 Wildcard Mantra Slot",
+        "+1 Mobility Mantra Slot",
+        "+8 Passive Agility",
+        "+5 Health",
+        "+5 Ether",
+        "+12 Passive Agility"
+      ],
+      "abilities": {
+        "talents": [
+          "Acceleration Points - Talent: Striking an opponent in the back with mobility mantras or basic attacks steals and grants additional momentum. (+5 Passive Agility)",
+          "Jetstream Pursuit - Talent: Upon a successful flourish, teleport to the opponent when they stop moving to receive a significant momentum boost.",
+          "Momentum Bar - Passive: Parrying, dodging, running, and landing basic attacks grant short bursts of momentum; when maxed, mantras deal more damage and change color.",
+          "Stratos Step - Talent: While wall-boosting, hold space at the end to boost further upwards. (+5 Health, +3 Passive Agility)",
+          "Decisive Winds - Talent: When damaged below 50% health, gain maximum sprint momentum temporarily. (+5 Ether)",
+          "Rush of Ancients - Talent: Dashing at maximum sprint momentum makes you one with the wind. (+4 Passive Agility)"
+        ],
+        "mantras": [
+          "Fake Strike - Combat Mantra: Trick your opponent and quickly go behind them.",
+          "Jet Kick - Mobility Mantra: Rush forward with a jet kick (base damage 30)."
+        ]
+      },
+      "trivia": [
+        "Your eyes turn blue with a hint of white when using this Oath.",
+        "Jetstriker is renowned for its extreme agility and the ability to quickly escape engagements."
+      ],
+      "references": [
+        "https://deepwoken.fandom.com/wiki/Jetstriker"
+      ],
+      "navigation": "N/A"
+    },
+	{
+      "name": "Visionshaper",
+      "oath_requirement": "50 Charisma; Completing Aelita's Encounter; 1 Dark Feather",
+      "description": "Oath: Visionshaper is one of the 16 obtainable Oaths in Deepwoken. It allows one to utilize the power of illusions through a pact with The Nestmind to overwhelm enemies quickly and effectively. It is the opposing Oath to Blindseer, granting abilities based on conjuring illusory servants and manipulating reality.",
+      "mystic_quote": "I speak to the Owls. – The Nestmind",
+      "obtainment": [
+        "Meet the requirements: 50 Charisma, complete Aelita's Encounter in the Valley of Heroes (when not winter), and possess a Dark Feather.",
+        "Find Surge in the Widow Cave in The Depths and give him a Dark Feather. (Surge becomes OwlSurge and the area transitions.)",
+        "Avoid falling into the void when leaving Surge's room (you'll be in A Conscious Intersection).",
+        "Talk to The Nestmind and select 'I accept' to take the Oath. Refusing will result in your Dark Feather being taken and a return to reality."
+      ],
+      "progression": "Bring 5 Void Feathers to Surge to unlock all mantras and talents. Void Feathers can be crafted using 3 Dark Feathers and 1 Umbral Obsidian. Alternatively, if you've fully progressed Visionshaper on another character, spending 10 Knowledge will immediately max out the Oath.",
+      "effects": [
+        "+1 Support Mantra Slot",
+        "+2 Combat Mantra Slots"
+      ],
+      "abilities": {
+        "mantras": [
+          "Illusory Servants – Turn invisible briefly and spawn an illusory clone that targets the closest enemy. The clone deals half your damage and lasts a duration based on your progression.",
+          "Illusory Counter – Ready a stance that, if hit, negates the attack, swaps your position with the target, and spawns a Visionshaper clone.",
+          "Mirror Illusion – Knock back targets within its radius and create an allied clone that mimics a target's last non-Visionshaper ability."
+        ],
+        "talents": [
+          "Reality Shift (Passive) – Command the closest conjured servant to use your last stored ability on a target when you press a designated key.",
+          "Shaper Clones – Your conjured clones copy your attunement path and mantra modifiers (but not enchantments or most talents).",
+          "Cheap Trick (Passive) – When hit below 50% health, automatically turn invisible and summon a Shaper Clone to grant invulnerability frames (60-second cooldown)."
+        ]
+      },
+      "trivia": [
+        "Visionshaper is designed as the counterpoint to Blindseer, focusing on illusions and clone mechanics.",
+        "It was reworked on September 20, 2024, removing the Illusory Realm in favor of Mirror Illusion.",
+        "Despite its inspiration from illusion techniques, its mechanics are uniquely tailored to Deepwoken."
+      ],
+      "references": [
+        "https://deepwoken.fandom.com/wiki/Visionshaper"
+      ],
+      "navigation": "N/A"
+    }
+  ]
+}
