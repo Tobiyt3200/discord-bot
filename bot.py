@@ -11,19 +11,20 @@ from discord import app_commands
 from dotenv import load_dotenv
 from flask import Flask
 from threading import Thread
+import datetime
 
-app = Flask('')
+# app = Flask('')
 
-@app.route('/')
-def home():
-    return "Bot is alive!"
+# @app.route('/')
+# def home():
+#     return "Bot is alive!"
 
-def run():
-    app.run(host='0.0.0.0', port=8080)
+# def run():
+#     app.run(host='0.0.0.0', port=8080)
 
-def keep_alive():
-    t = Thread(target=run)
-    t.start()
+# def keep_alive():
+#     t = Thread(target=run)
+#     t.start()
 
 # 1. Load environment variables
 load_dotenv()
@@ -55,28 +56,41 @@ class MyBot(commands.Bot):
         except Exception as err:
             print(f"Error syncing commands: {err}")
 
+
 bot = MyBot(command_prefix="!", intents=intents)
 
+
 # -----------------
-#   foundation 
+#   foundation
 # -----------------
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.user} (ID: {bot.user.id})")
+    channel = bot.get_channel(MOD_CHANNEL_ID)
+    if channel:
+        today = datetime.datetime.now().strftime("%d.%m.%Y")
+        message = f"Debug session started: {bot.user.name} on {today}"
+        await channel.send(message)
+    else:
+        print("Channel not found!")
     print(f" ------- Discord Bot is Ready to go! -------")
+
 
 def is_in_guild(ctx):
     return ctx.guild and ctx.guild.id == MY_GUILD_ID
 
 @bot.tree.command(name="ping", description="Replies with Pong!")
+@app_commands.guilds(discord.Object(id=MY_GUILD_ID))
 async def slash_ping(interaction: discord.Interaction):
     await interaction.response.send_message("Pong!")
 
-@bot.tree.command(name="repeat", description="Repeats the text you provide.")
+@bot.tree.command(name="repeat", description="Repeats the text you provide.")#
+@app_commands.guilds(discord.Object(id=MY_GUILD_ID))
 async def slash_repeat(interaction: discord.Interaction, text: str):
     await interaction.response.send_message(text)
 
 @bot.tree.command(name="owner")
+@app_commands.guilds(discord.Object(id=MY_GUILD_ID))
 async def owner_command(interaction: discord.Interaction):
     await ctx.send("Tobi programmed me!")
 
@@ -103,7 +117,9 @@ TALENTS_DATA = load_json("talents.json")
 CATEGORIES_DATA = load_categories(TALENTS_DATA)
 BOSSES_LIST = ["Duke Erisia", "Overlord Azur", "Warden Korr"]
 
-async def fetch_wiki_data(title: str, prop: str = "extracts", extra_params: dict = None) -> dict:
+async def fetch_wiki_data(
+    title: str, prop: str = "extracts", extra_params: dict = None
+) -> dict:
     base_url = "https://deepwoken.fandom.com/api.php"
     params = {
         "action": "query",
@@ -112,10 +128,7 @@ async def fetch_wiki_data(title: str, prop: str = "extracts", extra_params: dict
         "prop": prop,
     }
     if prop == "extracts":
-        params.update({
-            "exintro": "",
-            "explaintext": ""
-        })
+        params.update({"exintro": "", "explaintext": ""})
     if extra_params:
         params.update(extra_params)
     async with aiohttp.ClientSession() as session:
@@ -124,6 +137,7 @@ async def fetch_wiki_data(title: str, prop: str = "extracts", extra_params: dict
                 raise Exception(f"API responded with status code {response.status}")
             data = await response.json()
             return data
+
 
 def parse_wiki_response(data: dict) -> dict:
     try:
@@ -136,18 +150,28 @@ def parse_wiki_response(data: dict) -> dict:
         print(f"Error parsing wiki response: {e}")
         return None
 
+
 def fuzzy_match(query: str, dataset: list[str]) -> list[str]:
-    return get_close_matches(query.lower(), [item.lower() for item in dataset], n=15, cutoff=0.6)
+    return get_close_matches(
+        query.lower(), [item.lower() for item in dataset], n=15, cutoff=0.6
+    )
+
 
 def build_talent_embed(talent_data: dict) -> discord.Embed:
     embed = discord.Embed(
         title=talent_data.get("name", "Unknown Talent"),
         description=talent_data.get("description", "No description available."),
-        color=0x00FF00
+        color=0x00FF00,
     )
-    embed.add_field(name="Category", value=talent_data.get("category", "None"), inline=True)
-    embed.add_field(name="Rarity", value=talent_data.get("rarity_type", "Unknown"), inline=True)
-    embed.add_field(name="Requirement", value=talent_data.get("requirement", "None"), inline=False)
+    embed.add_field(
+        name="Category", value=talent_data.get("category", "None"), inline=True
+    )
+    embed.add_field(
+        name="Rarity", value=talent_data.get("rarity_type", "Unknown"), inline=True
+    )
+    embed.add_field(
+        name="Requirement", value=talent_data.get("requirement", "None"), inline=False
+    )
     bonus = talent_data.get("bonus")
     if bonus and bonus != "N/A":
         embed.add_field(name="Bonus", value=bonus, inline=False)
@@ -159,11 +183,14 @@ def build_talent_embed(talent_data: dict) -> discord.Embed:
         embed.add_field(name="Hints", value=hints_str, inline=False)
     return embed
 
+
 def build_category_embed(category_data: dict) -> discord.Embed:
     embed = discord.Embed(
         title=f"Category: {category_data.get('name', 'Unknown Category')}",
-        description=category_data.get("mystic_dialogue", "No mystic dialogue available."),
-        color=0x0099FF
+        description=category_data.get(
+            "mystic_dialogue", "No mystic dialogue available."
+        ),
+        color=0x0099FF,
     )
     talents = category_data.get("talents", [])
     if talents:
@@ -177,6 +204,7 @@ def build_category_embed(category_data: dict) -> discord.Embed:
     embed.add_field(name="Talents", value=talents_str, inline=False)
     return embed
 
+
 # Optional: Global Paginator Helper for multiple embeds
 class Paginator(discord.ui.View):
     def __init__(self, embeds: list[discord.Embed]):
@@ -185,10 +213,14 @@ class Paginator(discord.ui.View):
         self.current = 0
 
     async def update_message(self, interaction: discord.Interaction):
-        await interaction.response.edit_message(embed=self.embeds[self.current], view=self)
+        await interaction.response.edit_message(
+            embed=self.embeds[self.current], view=self
+        )
 
     @discord.ui.button(label="Previous", style=discord.ButtonStyle.primary)
-    async def previous(self, interaction: discord.Interaction, button: discord.ui.Button):
+    async def previous(
+        self, interaction: discord.Interaction, button: discord.ui.Button
+    ):
         self.current = (self.current - 1) % len(self.embeds)
         await self.update_message(interaction)
 
@@ -197,10 +229,14 @@ class Paginator(discord.ui.View):
         self.current = (self.current + 1) % len(self.embeds)
         await self.update_message(interaction)
 
+
 # ---------------------------------------------------------------------------
 # Slash Commands (Global)
 # ---------------------------------------------------------------------------
-@bot.tree.command(name="wiki_boss", description="Fetch Deepwoken boss details from the Wiki.")
+@bot.tree.command(
+    name="wiki_boss", description="Fetch Deepwoken boss details from the Wiki."
+)
+@app_commands.guilds(discord.Object(id=MY_GUILD_ID))
 async def wiki_boss(interaction: discord.Interaction, boss_name: str):
     if boss_name.lower() not in [name.lower() for name in BOSSES_LIST]:
         matches = fuzzy_match(boss_name, BOSSES_LIST)
@@ -208,21 +244,29 @@ async def wiki_boss(interaction: discord.Interaction, boss_name: str):
             boss_name = matches[0]
         elif len(matches) > 1:
             description = "Did you mean one of these bosses?\n" + "\n".join(matches)
-            embed = discord.Embed(title="Multiple Boss Matches", description=description, color=0xFFAA00)
+            embed = discord.Embed(
+                title="Multiple Boss Matches", description=description, color=0xFFAA00
+            )
             await interaction.response.send_message(embed=embed, ephemeral=True)
             return
         else:
-            await interaction.response.send_message(f"No boss found for '{boss_name}'. Check your spelling!", ephemeral=True)
+            await interaction.response.send_message(
+                f"No boss found for '{boss_name}'. Check your spelling!", ephemeral=True
+            )
             return
     try:
         data = await fetch_wiki_data(boss_name, prop="extracts")
         page = parse_wiki_response(data)
         if not page:
-            await interaction.response.send_message(f"No data found for boss '{boss_name}'.", ephemeral=True)
+            await interaction.response.send_message(
+                f"No data found for boss '{boss_name}'.", ephemeral=True
+            )
             return
         description = page.get("extract", "No description available.")
 
-        data_images = await fetch_wiki_data(boss_name, prop="images", extra_params={"imlimit": "max", "iiprop": "url"})
+        data_images = await fetch_wiki_data(
+            boss_name, prop="images", extra_params={"imlimit": "max", "iiprop": "url"}
+        )
         page_images = parse_wiki_response(data_images)
         image_url = None
         if page_images and "images" in page_images:
@@ -234,24 +278,38 @@ async def wiki_boss(interaction: discord.Interaction, boss_name: str):
             embed.set_thumbnail(url=image_url)
         await interaction.response.send_message(embed=embed)
     except Exception as e:
-        await interaction.response.send_message(f"Error fetching boss data: {e}", ephemeral=True)
+        await interaction.response.send_message(
+            f"Error fetching boss data: {e}", ephemeral=True
+        )
 
-@bot.tree.command(name="wiki_oath", description="Fetch Deepwoken oath details from the Wiki.")
+
+@bot.tree.command(
+    name="wiki_oath", description="Fetch Deepwoken oath details from the Wiki."
+)
+@app_commands.guilds(discord.Object(id=MY_GUILD_ID))
 async def wiki_oath(interaction: discord.Interaction, oath_name: str):
     try:
         data = await fetch_wiki_data(oath_name, prop="extracts")
         page = parse_wiki_response(data)
         if not page:
-            await interaction.response.send_message(f"No data found for oath '{oath_name}'.", ephemeral=True)
+            await interaction.response.send_message(
+                f"No data found for oath '{oath_name}'.", ephemeral=True
+            )
             return
         description = page.get("extract", "No description available.")
         embed = discord.Embed(title=oath_name, description=description, color=0x8A2BE2)
         await interaction.response.send_message(embed=embed)
     except Exception as e:
-        await interaction.response.send_message(f"Error fetching oath data: {e}", ephemeral=True)
+        await interaction.response.send_message(
+            f"Error fetching oath data: {e}", ephemeral=True
+        )
 
-@bot.tree.command(name="wiki_talent", description="Show detailed info about a Deepwoken Talent.")
-async def wiki_talent(interaction: discord.Interaction, talent: str):
+
+@bot.tree.command(
+    name="talent", description="Show detailed info about a Deepwoken Talent."
+)
+@app_commands.guilds(discord.Object(id=MY_GUILD_ID))
+async def wiki_talent(interaction: discord.Interaction, talent: str ):
     search_term = talent.lower()
     if search_term in TALENTS_DATA:
         embed = build_talent_embed(TALENTS_DATA[search_term])
@@ -259,17 +317,27 @@ async def wiki_talent(interaction: discord.Interaction, talent: str):
         return
     matches = get_close_matches(search_term, TALENTS_DATA.keys(), n=15, cutoff=0.6)
     if not matches:
-        await interaction.response.send_message(f"No talent found for '{talent}'.", ephemeral=True)
+        await interaction.response.send_message(
+            f"No talent found for '{talent}'.", ephemeral=True
+        )
         return
     if len(matches) == 1:
         embed = build_talent_embed(TALENTS_DATA[matches[0]])
         await interaction.response.send_message(embed=embed)
     else:
-        description = "Did you mean one of these talents?\n" + "\n".join(TALENTS_DATA[m]["name"] for m in matches)
-        embed = discord.Embed(title="Multiple Talent Matches", description=description, color=0xFFAA00)
+        description = "Did you mean one of these talents?\n" + "\n".join(
+            TALENTS_DATA[m]["name"] for m in matches
+        )
+        embed = discord.Embed(
+            title="Multiple Talent Matches", description=description, color=0xFFAA00
+        )
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
-@bot.tree.command(name="wiki_category", description="Show detailed info about a Deepwoken Category.")
+
+@bot.tree.command(
+    name="wiki_category", description="Show detailed info about a Deepwoken Category."
+)
+@app_commands.guilds(discord.Object(id=MY_GUILD_ID))
 async def wiki_category(interaction: discord.Interaction, category: str):
     search_term = category.lower()
     if search_term in CATEGORIES_DATA:
@@ -278,14 +346,20 @@ async def wiki_category(interaction: discord.Interaction, category: str):
         return
     matches = get_close_matches(search_term, CATEGORIES_DATA.keys(), n=15, cutoff=0.6)
     if not matches:
-        await interaction.response.send_message(f"No category found for '{category}'.", ephemeral=True)
+        await interaction.response.send_message(
+            f"No category found for '{category}'.", ephemeral=True
+        )
         return
     if len(matches) == 1:
         embed = build_category_embed(CATEGORIES_DATA[matches[0]])
         await interaction.response.send_message(embed=embed)
     else:
-        description = "Did you mean one of these categories?\n" + "\n".join(CATEGORIES_DATA[m]["name"] for m in matches)
-        embed = discord.Embed(title="Multiple Category Matches", description=description, color=0xFFAA00)
+        description = "Did you mean one of these categories?\n" + "\n".join(
+            CATEGORIES_DATA[m]["name"] for m in matches
+        )
+        embed = discord.Embed(
+            title="Multiple Category Matches", description=description, color=0xFFAA00
+        )
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
@@ -483,7 +557,6 @@ async def wiki_category(interaction: discord.Interaction, category: str):
 @bot.tree.command(
     name="kickwithrole", description="Kicks members with a selected role."
 )
-
 @app_commands.describe(role="Select a role to kick members with that role.")
 @app_commands.guilds(discord.Object(id=MY_GUILD_ID))
 async def kick_with_role(interaction: discord.Interaction, role: discord.Role):
@@ -522,6 +595,7 @@ async def kick_with_role(interaction: discord.Interaction, role: discord.Role):
     if errors:
         response_message += " Some errors occurred:\n" + "\n".join(errors)
     await interaction.response.send_message(response_message, ephemeral=True)
+
 
 @bot.tree.command(
     name="kicknoroles",
@@ -565,17 +639,16 @@ async def kick_no_roles(interaction: discord.Interaction):
         response_message += " Some errors occurred:\n" + "\n".join(errors)
     await interaction.response.send_message(response_message, ephemeral=True)
 
-@bot.tree.command(name="warn", description="Send a warning DM to a selected member and add a warning count.")
+
+@bot.tree.command(
+    name="warn",
+    description="Send a warning DM to a selected member and add a warning count.",
+)
 @app_commands.describe(
-    member="Select the member to warn.",
-    message="The warning message to send."
+    member="Select the member to warn.", message="The warning message to send."
 )
 @app_commands.guilds(discord.Object(id=MY_GUILD_ID))
-async def warn(
-    interaction: discord.Interaction,
-    member: discord.Member,
-    message: str
-):
+async def warn(interaction: discord.Interaction, member: discord.Member, message: str):
     mod_role = discord.utils.get(interaction.guild.roles, name="mod")
     if not mod_role:
         await interaction.response.send_message(
@@ -592,11 +665,13 @@ async def warn(
         warn_embed = discord.Embed(
             title="You have received a warning",
             description=f"Please take note that you have been warned in **{interaction.guild.name}**.",
-            color=discord.Color.orange()
+            color=discord.Color.orange(),
         )
         warn_embed.add_field(name="Warning Details", value=message, inline=False)
-        warn_embed.set_footer(text="Please adhere to the server rules to avoid further actions.")
-        
+        warn_embed.set_footer(
+            text="Please adhere to the server rules to avoid further actions."
+        )
+
         if SERVER_ICON_URL:
             warn_embed.set_thumbnail(url=SERVER_ICON_URL)
         else:
@@ -622,11 +697,12 @@ async def warn(
             f"Failed to send warning to {member.mention}: {e}", ephemeral=True
         )
 
+
 # RESOLVE MEMBER
 def resolve_member(guild: discord.Guild, member_str: str) -> discord.Member | None:
     """Attempt to resolve a member from a string (mention, ID, or name)."""
     # Check if it's a mention: <@!1234567890> or <@1234567890>
-    mention_match = re.match(r'<@!?(\d+)>', member_str)
+    mention_match = re.match(r"<@!?(\d+)>", member_str)
     if mention_match:
         member_id = int(mention_match.group(1))
         return guild.get_member(member_id)
@@ -637,10 +713,15 @@ def resolve_member(guild: discord.Guild, member_str: str) -> discord.Member | No
     except ValueError:
         pass
     # Otherwise, try a case-insensitive name search
-    return discord.utils.find(lambda m: member_str.lower() in m.name.lower(), guild.members)
+    return discord.utils.find(
+        lambda m: member_str.lower() in m.name.lower(), guild.members
+    )
+
 
 @bot.tree.command(name="kick", description="Kick a selected member from the server.")
-@app_commands.describe(member="Member name, ID, or mention to kick.", reason="Optional reason for kicking.")
+@app_commands.describe(
+    member="Member name, ID, or mention to kick.", reason="Optional reason for kicking."
+)
 @app_commands.guilds(discord.Object(id=MY_GUILD_ID))
 async def kick(interaction: discord.Interaction, member: str, reason: str = ""):
     # Resolve the member manually
@@ -648,23 +729,29 @@ async def kick(interaction: discord.Interaction, member: str, reason: str = ""):
     if not resolved_member:
         await interaction.response.send_message(
             f"Could not resolve member: `{member}`. Please use a valid mention, ID, or name.",
-            ephemeral=True
+            ephemeral=True,
         )
         return
 
     # Check if the invoking user has the mod role
     mod_role = discord.utils.get(interaction.guild.roles, name="mod")
     if not mod_role:
-        await interaction.response.send_message("Mod role not found in this server.", ephemeral=True)
+        await interaction.response.send_message(
+            "Mod role not found in this server.", ephemeral=True
+        )
         return
     if mod_role not in interaction.user.roles:
-        await interaction.response.send_message("You must have the mod role to use this command.", ephemeral=True)
+        await interaction.response.send_message(
+            "You must have the mod role to use this command.", ephemeral=True
+        )
         return
 
     # If no reason is given, assign a default message.
     if not reason.strip():
-        reason = ("This is an automated message. You have been automatically kicked due to inactivity. "
-                  "It's nothing personal, but we wish to have active people in the server.")
+        reason = (
+            "This is an automated message. You have been automatically kicked due to inactivity. "
+            "It's nothing personal, but we wish to have active people in the server."
+        )
 
     try:
         # Build the DM embed
@@ -674,7 +761,9 @@ async def kick(interaction: discord.Interaction, member: str, reason: str = ""):
             color=discord.Color.red(),
         )
         dm_embed.add_field(name="Reason", value=reason, inline=False)
-        dm_embed.set_footer(text="We apologize for any inconvenience this may have caused.")
+        dm_embed.set_footer(
+            text="We apologize for any inconvenience this may have caused."
+        )
 
         try:
             await resolved_member.send(embed=dm_embed)
@@ -690,6 +779,7 @@ async def kick(interaction: discord.Interaction, member: str, reason: str = ""):
         await interaction.response.send_message(
             f"Failed to kick {resolved_member.mention}: {e}", ephemeral=True
         )
+
 
 # --------------------------------------------------------------------------
 # Data Loading for Talents and Categories
@@ -767,13 +857,13 @@ async def kick(interaction: discord.Interaction, member: str, reason: str = ""):
 #     """
 #     cat_name = category_data.get("name", "Unknown Category")
 #     mystic_dialogue = category_data.get("mystic_dialogue", "No mystic dialogue available.")
-    
+
 #     embed = discord.Embed(
 #         title=f"Category: {cat_name}",
 #         description=mystic_dialogue,
 #         color=0x0099FF
 #     )
-    
+
 #     talents = category_data.get("talents", [])
 #     if talents:
 #         lines = []
@@ -786,19 +876,19 @@ async def kick(interaction: discord.Interaction, member: str, reason: str = ""):
 #         talents_str = "\n".join(lines)
 #     else:
 #         talents_str = "No talents found in this category."
-    
+
 #     embed.add_field(name="Talents", value=talents_str, inline=False)
 #     return embed
 
 # # --------------------------------------------------------------------------
-# #  /talent Command 
+# #  /talent Command
 # # --------------------------------------------------------------------------
 # @bot.tree.command(name="talent", description="Show detailed info about a Deepwoken Talent.")
 # @app_commands.describe(talent="Name of the talent you want info about.")
 # @app_commands.guilds(discord.Object(id=MY_GUILD_ID))
 # async def slash_talent(interaction: discord.Interaction, talent: str):
 #     search_term = talent.lower()
-    
+
 #     # 1) Exact match
 #     if search_term in TALENTS_DATA:
 #         await interaction.response.send_message(embed=build_talent_embed(TALENTS_DATA[search_term]))
@@ -840,7 +930,7 @@ async def kick(interaction: discord.Interaction, member: str, reason: str = ""):
 # @app_commands.guilds(discord.Object(id=MY_GUILD_ID))
 # async def slash_category(interaction: discord.Interaction, category: str):
 #     search_term = category.lower()
-    
+
 #     # 1) Exact match
 #     if search_term in CATEGORIES_DATA:
 #         embed = build_category_embed(CATEGORIES_DATA[search_term])
@@ -867,7 +957,7 @@ async def kick(interaction: discord.Interaction, member: str, reason: str = ""):
 #     if not fuzzy_matches:
 #         await interaction.response.send_message(f"No category found for '{category}'. Check your spelling!")
 #         return
-    
+
 #     if len(fuzzy_matches) == 1:
 #         embed = build_category_embed(CATEGORIES_DATA[fuzzy_matches[0]])
 #         await interaction.response.send_message(embed=embed)
@@ -900,27 +990,27 @@ async def kick(interaction: discord.Interaction, member: str, reason: str = ""):
 #         color=0x8A2BE2,  # A pleasant purple color
 #         timestamp=discord.utils.utcnow()
 #     )
-    
+
 #     # Oath Requirement
 #     requirement = oath_data.get("oath_requirement", "None")
 #     embed.add_field(name="Oath Requirement", value=requirement, inline=False)
-    
+
 #     # Obtainment (list of steps)
 #     obtainment = oath_data.get("obtainment", [])
 #     if obtainment:
 #         obtainment_str = "\n".join(obtainment)
 #         embed.add_field(name="Obtainment", value=obtainment_str, inline=False)
-    
+
 #     # Progression (if available)
 #     progression = oath_data.get("progression")
 #     if progression:
 #         embed.add_field(name="Progression", value=progression, inline=False)
-    
+
 #     # Effects
 #     effects = oath_data.get("effects", [])
 #     if effects:
 #         embed.add_field(name="Effects", value="\n".join(effects), inline=False)
-    
+
 #     # Abilities – combine mantras and talents if available
 #     abilities = oath_data.get("abilities", {})
 #     abilities_lines = []
@@ -932,26 +1022,26 @@ async def kick(interaction: discord.Interaction, member: str, reason: str = ""):
 #         abilities_lines.extend(f"• {t}" for t in abilities["talents"])
 #     if abilities_lines:
 #         embed.add_field(name="Abilities", value="\n".join(abilities_lines), inline=False)
-    
+
 #     # Trivia
 #     trivia = oath_data.get("trivia", [])
 #     if trivia:
 #         embed.add_field(name="Trivia", value="\n".join(trivia), inline=False)
-    
+
 #     # References
 #     references = oath_data.get("references", [])
 #     if references:
 #         embed.add_field(name="References", value="\n".join(references), inline=False)
-    
+
 #     # Navigation – if provided
 #     navigation = oath_data.get("navigation", "N/A")
 #     embed.add_field(name="Navigation", value=navigation, inline=False)
-    
+
 #     # Mystic Quote (as footer)
 #     mystic_quote = oath_data.get("mystic_quote")
 #     if mystic_quote:
 #         embed.set_footer(text=mystic_quote)
-    
+
 #     return embed
 
 # # Slash command for oaths
@@ -960,13 +1050,13 @@ async def kick(interaction: discord.Interaction, member: str, reason: str = ""):
 # @app_commands.guilds(discord.Object(id=MY_GUILD_ID))
 # async def slash_oath(interaction: discord.Interaction, oath: str):
 #     search_term = oath.lower()
-    
+
 #     # 1) Exact match
 #     if search_term in OATHS_DATA:
 #         embed = build_oath_embed(OATHS_DATA[search_term])
 #         await interaction.response.send_message(embed=embed)
 #         return
-    
+
 #     # 2) Partial matches
 #     partial_matches = [name for name in OATHS_DATA if search_term in name]
 #     if partial_matches:
@@ -987,7 +1077,7 @@ async def kick(interaction: discord.Interaction, member: str, reason: str = ""):
 #         else:
 #             await interaction.response.send_message("Too many results. Please be more specific!", ephemeral=True)
 #             return
-    
+
 #     # 3) Fuzzy matching
 #     fuzzy_matches = get_close_matches(search_term, OATHS_DATA.keys(), n=15, cutoff=0.6)
 #     if not fuzzy_matches:
@@ -1007,6 +1097,6 @@ async def kick(interaction: discord.Interaction, member: str, reason: str = ""):
 #     else:
 #         await interaction.response.send_message("Too many possible matches. Please be more specific!", ephemeral=True)
 
-keep_alive()
+# keep_alive()
 
 bot.run(DISCORD_TOKEN)
