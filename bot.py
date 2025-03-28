@@ -50,8 +50,10 @@ class MyBot(commands.Bot):
     async def setup_hook(self):
         try:
             print(f"Attempting to sync slash commands for guild {MY_GUILD_ID}...")
-            await bot.tree.sync(guild=discord.Object(id=MY_GUILD_ID))
-            await self.tree.sync(guild=discord.Object(id=MY_GUILD_ID))
+            # await bot.tree.sync(guild=discord.Object(id=MY_GUILD_ID))
+            # await self.tree.sync(guild=discord.Object(id=MY_GUILD_ID))
+            # await bot.tree.sync()
+            # await self.tree.sync()
             print("Slash commands synced for guild:", MY_GUILD_ID)
         except Exception as err:
             print(f"Error syncing commands: {err}")
@@ -156,7 +158,6 @@ def fuzzy_match(query: str, dataset: list[str]) -> list[str]:
         query.lower(), [item.lower() for item in dataset], n=15, cutoff=0.6
     )
 
-
 def build_talent_embed(talent_data: dict) -> discord.Embed:
     embed = discord.Embed(
         title=talent_data.get("name", "Unknown Talent"),
@@ -175,14 +176,11 @@ def build_talent_embed(talent_data: dict) -> discord.Embed:
     bonus = talent_data.get("bonus")
     if bonus and bonus != "N/A":
         embed.add_field(name="Bonus", value=bonus, inline=False)
-    cooldown = talent_data.get("cooldown", "None")
-    embed.add_field(name="Cooldown", value=cooldown, inline=False)
     hints = talent_data.get("hint", [])
     if hints:
         hints_str = "\n".join(f"- {hint}" for hint in hints)
         embed.add_field(name="Hints", value=hints_str, inline=False)
     return embed
-
 
 def build_category_embed(category_data: dict) -> discord.Embed:
     embed = discord.Embed(
@@ -305,12 +303,34 @@ async def wiki_oath(interaction: discord.Interaction, oath_name: str):
         )
 
 
+def load_talents():
+    global TALENTS_DATA, CATEGORIES_DATA
+    try:
+        with open("talents.json", "r", encoding="utf-8") as f:
+            raw_data = json.load(f)
+        # For each category, store it in CATEGORIES_DATA
+        for category in raw_data.get("categories", []):
+            cat_name = category.get("name", "Unknown Category")
+            CATEGORIES_DATA[cat_name.lower()] = category
+
+            # For each talent in that category, store it in TALENTS_DATA by name
+            for talent in category.get("talents", []):
+                # Tag the talent with its category so we can display it
+                talent["category"] = cat_name
+                TALENTS_DATA[talent["name"].lower()] = talent
+
+        print(f"Loaded {len(TALENTS_DATA)} talents and {len(CATEGORIES_DATA)} categories from talents.json")
+    except Exception as e:
+        print(f"Failed to load talents: {e}")
+
 @bot.tree.command(
     name="talent", description="Show detailed info about a Deepwoken Talent."
 )
 @app_commands.guilds(discord.Object(id=MY_GUILD_ID))
 async def wiki_talent(interaction: discord.Interaction, talent: str ):
+    load_talents()
     search_term = talent.lower()
+    print(TALENTS_DATA)
     if search_term in TALENTS_DATA:
         embed = build_talent_embed(TALENTS_DATA[search_term])
         await interaction.response.send_message(embed=embed)
